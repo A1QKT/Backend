@@ -5,7 +5,7 @@ const mongoURI = config.get<string>("mongo.uri");
 
 const connection = mongoose.createConnection(mongoURI)
 
-connection.on("connected", () =>{
+connection.on("connected", () => {
     console.log("mongoose connected");
 })
 

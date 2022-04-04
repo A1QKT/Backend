@@ -12,7 +12,7 @@ export class GraphqlServer{
     async start(){
         let typeDefs = [
             gql`
-            scalar Datetime
+            scalar DateTime
             type Query{
                 _empty: String
             }
@@ -22,14 +22,33 @@ export class GraphqlServer{
             type Subscription{
                 _empty: String
             }
-            `,
+            type QueryInput{
+                "number of elements"
+                limit: Int 
+                "page number"
+                page: Int
+                "order of element"
+                order: any
+                "filter of page" 
+                filter: any
+                "search in page"
+                search: String
+            }
+            type Pagination{
+                "total number of element"
+                total: Int
+                "number of element in a page"
+                limit: Int
+                "page number"
+                page: Int
+            }`,
         ]
 
         let resolvers: any = {
             Query: {
                 _empty: () => "empty"
             },
-            Datetime: graphqlTypeDate
+            DateTime: graphqlTypeDate
         }       
 
         const loadSchema = await loadGraphqlSchema();
