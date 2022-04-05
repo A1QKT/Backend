@@ -18,10 +18,11 @@ export type User = Basemodel & {
 }
 
 const userSchema = new Schema({
+    uid: {type: String},
     username: {type: String, required: true},  
     name: {type: String, required :true},
     phone: {type: String},
-    password: {type: String, required: true},
+    password: {type: String},
     email: {type: String, required: true},
     role: {type: String, required: true, enum: Object.values(userRole)}  
 }, {timestamps: true})

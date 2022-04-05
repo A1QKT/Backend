@@ -11,7 +11,7 @@ export default {
                 return await fetch(query);
             }
             return await UserModel.find({});
-        }, 
+        },
         getOneUser: async (root: any, args: any, context: any) => {
             const {id} = args;
             const user = await UserModel.findById(id);
@@ -80,8 +80,9 @@ type QueryInput = {
     page?: number;
     order?: any;
     filter?: any;
-    search: string;
+    search?: string;
 }
+
 async function fetch(queryInput: QueryInput, select?: string) {
     const limit = queryInput.limit || 10;
     const skip = ((queryInput.page || 1) - 1) * limit || 0;

@@ -63,3 +63,19 @@
 //                 }
 //                 return context;
 //             }
+// flag: {
+//        __name: "FLAG",
+//        __format: "boolean"
+//     },
+//     number: {
+//         __name: "NUMBER",
+//         __format: "number"
+//     },
+//     array:{
+//         __name: "ARRAY",
+//         __format: "json"
+//     },
+//     object: {
+//         __name: "OBJECT",
+//         __format: "json"
+//     }

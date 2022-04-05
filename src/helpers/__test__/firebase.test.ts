@@ -1,7 +1,8 @@
-// import { initializeApp } from "firebase-admin/app"
-// import firebase from "../firebase"
-// import logger from "../logger"
+import firebase from "../firebase";
 
-// export default test("Firebase", async () => {
-//     console.log("Firebase", firebase.options)
-// })
+export default test("firebase connection", async () => {
+    const accessToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ2NDExN2FjMzk2YmM3MWM4YzU5ZmI1MTlmMDEzZTJiNWJiNmM2ZTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vc2FsZS1wcm9kdWN0aW9uIiwiYXVkIjoic2FsZS1wcm9kdWN0aW9uIiwiYXV0aF90aW1lIjoxNjQ5MDc2OTUyLCJ1c2VyX2lkIjoiM0EwS05Nc3dqZVE1cExEd1FSdUp4cUdzeGZxMiIsInN1YiI6IjNBMEtOTXN3amVRNXBMRHdRUnVKeHFHc3hmcTIiLCJpYXQiOjE2NDkwNzY5NTIsImV4cCI6MTY0OTA4MDU1MiwiZW1haWwiOiJiaWdvbmU2Nzg4QHhhc2Vtcy5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZW1haWwiOlsiYmlnb25lNjc4OEB4YXNlbXMuY29tIl19LCJzaWduX2luX3Byb3ZpZGVyIjoicGFzc3dvcmQifX0.OxjQMoZbkOy6RH15PTcJ_P8wg7FzdVKWmRre1KLZOsuR94rTZlPy7UBkZ8P1x5vVKKcFmAQjrgZKmkHDPBygloy0mcFPm9Ua08ZmoIEIIkt5CBNFGxR_DTiCO4VK01EIOTrttr2cFdy72Yr1yYA7XTh19k03bMkJPcSdIk48cicG2bc44PoGqFk9nbVv6rloJu9SJEQJLHHZFGjd53nzRuPbst2xzc6EiTrx43JATrOisYC6VQpK9syIBP9pn4BhtVkVNYp1qFtcgNEj89C7orQ9YTBOx8XL0AHiKjZQHZN0Kl01dXcWCwYEIWKzfoxvTQE4R_g1SZfv3l4a3B69Aw";
+    const decodedToken = await firebase.auth().verifyIdToken(accessToken);
+    console.log(decodedToken);
+    // console.log("firebase", firebase.options);
+})

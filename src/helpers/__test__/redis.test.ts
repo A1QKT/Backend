@@ -1,4 +1,4 @@
-test("redis counter", async () => {
+export default test("redis counter", async () => {
     const x = 100;
     expect(x).toBe(100);
 })

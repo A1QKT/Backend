@@ -13,6 +13,7 @@ export class GraphqlServer{
         let typeDefs = [
             gql`
             scalar DateTime
+            scalar Mixed
             type Query{
                 _empty: String
             }
@@ -22,15 +23,15 @@ export class GraphqlServer{
             type Subscription{
                 _empty: String
             }
-            type QueryInput{
+            input QueryInput{
                 "number of elements"
                 limit: Int 
                 "page number"
                 page: Int
                 "order of element"
-                order: any
+                order: Mixed
                 "filter of page" 
-                filter: any
+                filter: Mixed
                 "search in page"
                 search: String
             }
