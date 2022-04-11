@@ -9,7 +9,7 @@ export function startServer(){
     app.use(json());
     app.use(cors());
     app.use(morgan(':method :url :status :res[content-length] - :response-time ms'));
-    app.get("/", (req, res) =>{
+    app.get("/", (req, res) => {
         res.send("hello em")
     })
     app.get("/get", (req, res) => {
@@ -18,7 +18,7 @@ export function startServer(){
     app.post("/post", (req, res) => {
         res.json(req.body);
     })
-    app.listen(3000, ()=>{
+    app.listen(3000, () => {
         console.log("start express on http://localhost:3000");    
     })
 }

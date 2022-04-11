@@ -20,15 +20,42 @@ export default {
                 const decodedToken = await firebase.auth().verifyIdToken(accessToken);
                 let user = await UserModel.findOne({uid: decodedToken.uid});
                 if(!user) {
-                    user = await UserModel.create({
-                        uid: decodedToken.uid,
-                        username: decodedToken.email,
-                        name: decodedToken.email,
-                        phone: "",
-                        password: null,
-                        email: decodedToken.email,
-                        role: userRole.USER,
-                    });
+                    const provider = decodedToken.firebase.sign_in_provider
+                    switch (decodedToken.firebase.sign_in_provider){
+                    case "emai":
+                        user = await UserModel.create({
+                            uid: decodedToken.uid,
+                            username: decodedToken.email,
+                            name: decodedToken.email,
+                            phone: "",
+                            password: null,
+                            email: decodedToken.email,
+                            role: userRole.USER,
+                        });
+                        break;
+                    case "google.com":
+                        user  = await UserModel.create({
+                            uid: decodedToken.uid, 
+                            username: decodedToken.email,
+                            name: decodedToken.name,
+                            phone: "",
+                            email: decodedToken.email,
+                            password: null,
+                            role: userRole.USER,
+                        })
+                        break;
+                    default:
+                        user = await UserModel.create({
+                            uid: decodedToken.uid,
+                            username: decodedToken.phone_number,
+                            name: decodedToken.phone_number,
+                            phone: decodedToken.phone_number,
+                            password: null,
+                            email: "",
+                            role: userRole.USER
+                        });
+                        break;
+                    }
                 }
                 const token = new Token(user._id, user.role as any);
                 return {

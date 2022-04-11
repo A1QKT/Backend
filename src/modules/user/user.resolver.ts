@@ -2,17 +2,20 @@ import { UserModel } from "./user.model"
 import passwordHash from "password-hash"
 import { validateEmail } from "../../helpers/function/checkEmail";
 import _ from "lodash";
-
+import { Context } from "../../helpers/graphql/context";
+import { userRole } from "./user.model";
 export default {
     Query: { 
-        getAllUsers: async (root: any, args: any, context: any) => {
+        getAllUsers: async (root: any, args: any, context: Context) => {
+            if(!context.isAuthent) throw Error("unauthent");
+            if(context.token?.role != (userRole.ADMIN as any)) throw Error("permission denied");
             const {query} = args;
-            if(query) {
-                return await fetch(query);
-            }
-            return await UserModel.find({});
+              if(query) {
+                  return await fetch(query);
+              }
+              return await UserModel.find({});
         },
-        getOneUser: async (root: any, args: any, context: any) => {
+        getOneUser: async (root: any, args: any, context: Context) => {
             const {id} = args;
             const user = await UserModel.findById(id);
             if(!user){
@@ -22,7 +25,7 @@ export default {
         }
     },
     Mutation: {
-        createUser: async (root: any, args: any, context: any) => {
+        createUser: async (root: any, args: any, context: Context) => {
             const {data} = args;
             const {username, name, password, phone, email, role} = data;
             if(username < 6){
@@ -47,7 +50,7 @@ export default {
             console.log(user);
             return user;
         }, 
-        updateUser: async (root: any, args: any, context: any) => {
+        updateUser: async (root: any, args: any, context: Context) => {
             const {id, data} = args;
             const {name, phone, email} = data;
             const user = await UserModel.findById(id);

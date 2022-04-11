@@ -4,8 +4,9 @@ import {loadGraphqlSchema, loadGraphqlResolver, loadGraphql} from "./autoloader"
 import graphqlTypeDate from "graphql-type-datetime";
 import _ from "lodash";
 import minifyGraphql from "minify-graphql-loader";
-import logger from "./logger";
+import logger from "../logger";
 import morgan from "morgan";
+import {Context} from "./context";
 
 export class GraphqlServer{
     constructor(public app: Application){}
@@ -65,6 +66,9 @@ export class GraphqlServer{
         const server = new ApolloServer({
             typeDefs: typeDefs,
             resolvers: resolvers,
+            context: async ({req}) => {
+                return new Context({req});
+            }
         });
         
         morgan.token("gql-query", (req: Request) => req.body.query)

@@ -14,7 +14,8 @@ export type User = Basemodel & {
     phone?: string,
     password?: string,
     email?: string,
-    role?: userRole
+    role?: userRole,
+    scope?: [string]
 }
 
 const userSchema = new Schema({
@@ -24,7 +25,8 @@ const userSchema = new Schema({
     phone: {type: String},
     password: {type: String},
     email: {type: String, required: true},
-    role: {type: String, required: true, enum: Object.values(userRole)}  
+    role: {type: String, required: true, enum: Object.values(userRole)},
+    scope: {type: [String]}
 }, {timestamps: true})
 
 userSchema.index({username : 1}, {unique: true});
