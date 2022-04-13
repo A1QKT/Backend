@@ -1,8 +1,13 @@
 @startuml
+actor "Client" as Client
+usecase "ViewProduct" as ViewProduct 
+usecase "AddProductToCart" as AddProduct
+usecase "MakeOrder" as MakeOrder
+usecase "Login" as Login
 
-(First usecase)
-(Another usecase) as (UC2)
-usecase UC3
-usecase (Last\nusecase) as UC4
-
+left to right direction
+Client --> ViewProduct
+Client --> MakeOrder
+MakeOrder <-- Login: <<include>>
+AddProduct <-- Login: <<include>>
 @enduml

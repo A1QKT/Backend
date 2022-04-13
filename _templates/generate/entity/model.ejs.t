@@ -6,11 +6,6 @@ import {Schema} from "mongoose";
 import { Basemodel } from "../../base/baseModel";
 import { Mongo } from "../../helpers/mongo";
 
-export enum userRole{
-    "ADMIN",
-    "USER"
-}
-
 export type User = Basemodel & { 
     uid?: string,
     username?: string,
@@ -21,7 +16,7 @@ export type User = Basemodel & {
     role?: userRole
 }
 
-const userSchema = new Schema({
+const <%= name %>Schema = new Schema({
     username: {type: String, required: true},  
     name: {type: String, required :true},
     phone: {type: String},

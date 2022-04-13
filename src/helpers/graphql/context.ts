@@ -22,5 +22,5 @@ export class Context{
         if(!this.isAuthent) throw Error("unauthent");
         return this.token?._id;
     }
-    
+     
 }
