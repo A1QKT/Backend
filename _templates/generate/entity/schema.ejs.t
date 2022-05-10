@@ -1,41 +1,29 @@
+---
+to <%= h.dir(name) %> / <%= h.name(name, true) %>.schema.ts
+---
 import { gql } from "apollo-server-express";
 
 export default gql`
     extend type Query{
-        getAllUsers(query: QueryInput): UserPagination
-        getOneUser(id: String!): User
+        getAll<%= h.name(name) %>s(query: QueryInput): <%= h.name(name)%>Pagination
+        getOne<%= h.name(name) %>(id: String!): <%= h.name(name)%>
     }
     extend type Mutation{
-        createUser(data: CreateUserInput!): User
-        updateUser(id: String!, data: UpdateUserInput): User
-        deleteUser(id: String!): User 
+        create<%= h.name(name)%>(data: Create<%= h.name(name)%>Input!): <%= h.name(name)%>
+        update<%= h.name(name)%>(id: String!, data: Update<%= h.name(name)%>Input): <%= h.name(name)%>
+        delete<%= h.name(name)%>(id: String!): <%= h.name(name)%> 
     }
-    type User {
+    type <%= h.name(name)%> {
         id: String!
         createdAt: DateTime
         updatedAt: DateTime
-        username: String
-        name: String
-        phone: String
-        password: String
-        "ADMIN, USER"
-        role: String
     }
-    type UserPagination{
-        users: [User],
+    type <%= h.name(name)%>Pagination{
+        <%= h.name(name)%>s: [<%= h.name(name)%>],
         pagination: Pagination
     }
-    input CreateUserInput{
-        username: String!
-        name: String!
-        password: String!
-        phone: String
-        email: String!
-        role: String!
+    input Create<%= h.name(name)%>Input{
     }
-    input UpdateUserInput{
-        name: String 
-        phone: String 
-        email: String
+    input Update<%= h.name(name)%>Input{
     }
 `

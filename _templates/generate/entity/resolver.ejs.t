@@ -1,10 +1,13 @@
-import { UserModel } from "./user.model"
+---
+to <%= h.dir(name) %>/<%= h.name(name, true) %>.resolver.ts
+---
+
+import { <=% h.name(name) %>Model } from "./user.model"
 import passwordHash from "password-hash"
 import { validateEmail } from "../../helpers/function/checkEmail";
 import _ from "lodash";
 import { Context } from "../../helpers/graphql/context";
-import { userRole } from "./user.model";
-import { userService } from "./user.service";
+import { <=% h.name(name, true)%>Service } from "./user.service";
 
 export default {
     Query: { 
@@ -67,6 +70,7 @@ export default {
         }
     }
 }
+
 async function checkExistingUsername(username: String){
     const user = await UserModel.findOne({username})
     if(user){

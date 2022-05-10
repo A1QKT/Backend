@@ -1,30 +1,11 @@
 ---
-to: src/modules/<%= name %>/ <%= name %>.model.ts
+to: <%= h.dir(name) %>/<% h.name(name, true) %>.model.ts
 ---
 
 import {Schema} from "mongoose";
-import { Basemodel } from "../../base/baseModel";
-import { Mongo } from "../../helpers/mongo";
+import { Basemodel } from "<%= h.importPath(name, "src/base/baseModel") %>";
+import { Mongo } from "<%= h.importPath(name, "src/helpers/mongo") %>;
 
-export type User = Basemodel & { 
-    uid?: string,
-    username?: string,
-    name?: string, 
-    phone?: string,
-    password?: string,
-    email?: string,
-    role?: userRole
-}
+const <%= h.name(name) %>Schema = new Schema({}, {timestamps: true})
 
-const <%= name %>Schema = new Schema({
-    username: {type: String, required: true},  
-    name: {type: String, required :true},
-    phone: {type: String},
-    password: {type: String, required: true},
-    email: {type: String, required: true},
-    role: {type: String, required: true, enum: Object.values(userRole)}  
-}, {timestamps: true})
-
-userSchema.index({username : 1}, {unique: true});
-
-export const UserModel = Mongo.model<User>("User", userSchema);
+export const <%= h.name(name) %>Model = Mongo.model<%= h.name(name) %>("<%= h.name(name) %>", <%= h.name(name, true) %>Schema);
