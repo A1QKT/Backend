@@ -231,3 +231,12 @@
 
 [2022-04-09 16:37:06][[32minfo[39m] GRAPHQL query{getAllUsers{users{id name}}} - 200 46.970 ms
 
+[2022-05-10 19:30:35][[31merror[39m] Can not connect to Redis
+[2022-05-10 19:33:36][[32minfo[39m] GRAPHQL - - 200 2.419 ms
+
+[2022-05-10 19:33:46][[32minfo[39m] GRAPHQL query{getAllUsers{users{id name}}} - 200 56.835 ms
+
+[2022-05-10 19:33:52][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){token}} - 200 348.704 ms
+
+[2022-05-10 19:34:28][[32minfo[39m] GRAPHQL query GetAllDistricts{getAllDistricts{name}} - 200 221.073 ms
+
