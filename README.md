@@ -4,7 +4,7 @@
 * Hygen generating data
 * Jest testing
 * Heroku deploying
-## How to use this repo
+## How to use this repository
 
 
 # GENERATE DATA TOOL
