@@ -18,7 +18,6 @@ export default gql`
         name: String
         phone: String
         password: String
-        "ADMIN, USER"
         role: String
     }
     type UserPagination{

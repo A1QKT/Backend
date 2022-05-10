@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { RouterConfig } from "../../helpers/graphql/autoloader";
+import { RouterConfig } from "../../helpers/autoloader";
 import { ExcelUploader } from "../../helpers/multer";
 
 export default [{
@@ -13,6 +13,9 @@ export default [{
     {
         method: "post",
         endPoint: "/product/postFileExcel",
-        middleware: [ExcelUploader.single("file")]
+        middleware: [ExcelUploader.single("file")],
+        handler: async (req: Request, res: Response) => {
+            res.send("some thing");
+        }
     }
 ] as RouterConfig[];

@@ -1,1 +1,36 @@
 [2022-05-10 19:30:35][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:41:58][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:44:20][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:44:36][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:44:46][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:44:54][[31merror[39m] Can not connect to Redis
+[2022-05-10 20:48:42][[31merror[39m] Can not connect to Redis
+[2022-05-10 21:43:59][[31merror[39m] Can not connect to Redis
+[2022-05-10 21:44:30][[31merror[39m] Can not connect to Redis
+[2022-05-10 21:51:22][[31merror[39m] Can not connect to Redis
+[2022-05-10 21:59:06][[31merror[39m] Can not connect to Redis
+[2022-05-10 21:59:33][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:02:12][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:03:26][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:04:00][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:04:20][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:05:37][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:06:11][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:06:55][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:16:56][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:17:22][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:32:37][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-10 22:32:37][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:40:38][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-10 22:40:38][[31merror[39m] Can not connect to Redis
+[2022-05-10 22:42:30][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-10 22:42:30][[31merror[39m] Can not connect to Redis

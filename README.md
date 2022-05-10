@@ -1,7 +1,7 @@
 ## What is in this repository
 * Rest API
 * GraphQl API
-* Hygen generating data
+* Hygen generating template
 * Jest testing
 * Heroku deploying
 ## How to use this repository

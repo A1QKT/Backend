@@ -13,7 +13,7 @@ export class CRUDService<T> extends BaseService{
     constructor (public Model: Model<T>) {
         super();
     }
-
+    
     async findbyID(id: string) {
         if(!Types.ObjectId.isValid(id)){
             Error("Invalid ID");
@@ -23,9 +23,11 @@ export class CRUDService<T> extends BaseService{
             throw Error("Data not found");
         }        
     }
+
     async create(data: any){
         return await this.Model.create(data);
     }
+
     async update(id: string, data: any){
         const doc = await this.Model.findByIdAndUpdate(id, {$set: data}, {new: true});
         if(!doc) {
@@ -33,6 +35,7 @@ export class CRUDService<T> extends BaseService{
         }
         return doc;
     }
+
     async delete(id: string){
         const doc = await this.Model.findByIdAndDelete(id);
         if(!doc){

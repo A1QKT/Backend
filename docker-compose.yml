@@ -19,15 +19,15 @@ services:
       - internal
     environment:
       - REDIS_REPLICATION_MODE=master
-  db:
-    image: mongo:latest
-    restart: unless-stopped
-    networks:
-      - internal
-    volumes:
-      - mongo_data:/data/db
+  # db:
+  #   image: mongo:latest
+  #   restart: unless-stopped
+  #   networks:
+  #     - internal
+  #   volumes:
+  #     - mongo_data:/data/db
 networks:
   internal:
     driver: bridge
-volumes:
-  mongo_data:
+# volumes:
+#   mongo_data:

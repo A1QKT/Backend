@@ -1,6 +1,6 @@
 import {ApolloServer, gql} from "apollo-server-express";
 import {Application, Request} from "express";
-import {loadGraphqlSchema, loadGraphqlResolver, loadGraphql} from "./autoloader";
+import {loadGraphqlSchema, loadGraphqlResolver, loadGraphql} from "../autoloader";
 import graphqlTypeDate from "graphql-type-datetime";
 import _ from "lodash";
 import minifyGraphql from "minify-graphql-loader";
@@ -8,6 +8,7 @@ import logger from "../logger";
 import morgan from "morgan";
 import {Context} from "./context";
 
+//Class GraphqlServer have argument is app type Application in express
 export class GraphqlServer{
     constructor(public app: Application){}
     async start(){
@@ -53,13 +54,13 @@ export class GraphqlServer{
             DateTime: graphqlTypeDate
         }       
 
-        const loadSchema = await loadGraphqlSchema();
+        const loadSchema :any = await loadGraphqlSchema();
         typeDefs = typeDefs.concat(loadSchema);
 
-        const loadResolver = await loadGraphqlResolver();
+        const loadResolver :any = await loadGraphqlResolver();
         resolvers = _.merge(resolvers, loadResolver);
 
-        const loadSchemaResolver: any = await loadGraphql();
+        const loadSchemaResolver :any = await loadGraphql();
         typeDefs = typeDefs.concat(loadSchemaResolver.typeDefs);
         resolvers = _.merge(resolvers, loadSchemaResolver.resolvers);
         

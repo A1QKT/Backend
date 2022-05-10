@@ -1,6 +1,6 @@
 import { gql } from "apollo-server-express";
 import firebase from "../../../helpers/firebase";
-import { UserModel, userRole } from "../user.model";
+import { UserModel, userRole} from "../user.model";
 import Token from "../../../helpers/token";
 
 export default {
@@ -22,7 +22,7 @@ export default {
                 if(!user) {
                     const provider = decodedToken.firebase.sign_in_provider
                     switch (decodedToken.firebase.sign_in_provider){
-                    case "emai":
+                    case "email":
                         user = await UserModel.create({
                             uid: decodedToken.uid,
                             username: decodedToken.email,

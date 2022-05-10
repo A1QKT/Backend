@@ -31,4 +31,5 @@ async function run(){
     await AddressModel.insertMany(addresses);
     console.log("Insert Successfully");
 }
+
 run()
