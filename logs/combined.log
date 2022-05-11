@@ -324,3 +324,200 @@ Error: connect ECONNREFUSED 127.0.0.1:6379
 Error: connect ECONNREFUSED 127.0.0.1:6379
     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
 [2022-05-10 22:42:30][[31merror[39m] Can not connect to Redis
+[2022-05-10 23:51:36][[32minfo[39m] API router started at /api
+[2022-05-10 23:51:39][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-10 23:51:39][[31merror[39m] Can not connect to Redis
+[2022-05-10 23:52:57][[32minfo[39m] API router started at /api
+[2022-05-10 23:52:59][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-10 23:52:59][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:28:55][[32minfo[39m] API router started at /api
+[2022-05-11 06:28:58][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:28:58][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:29:42][[32minfo[39m] API router started at /api
+[2022-05-11 06:29:49][[31merror[39m] Connection timeout
+Error: Connection timeout
+    at Socket.<anonymous> (/Users/macintosh/Documents/Project/init-typescript/node_modules/@node-redis/client/dist/lib/client/socket.js:169:124)
+    at Object.onceWrapper (events.js:519:28)
+    at Socket.emit (events.js:400:28)
+[2022-05-11 06:29:49][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:41:52][[32minfo[39m] API router started at /api
+[2022-05-11 06:41:54][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:41:54][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:42:36][[32minfo[39m] API router started at /api
+[2022-05-11 06:42:38][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:42:38][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:43:05][[32minfo[39m] API router started at /api
+[2022-05-11 06:43:07][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:43:07][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:43:53][[32minfo[39m] API router started at /api
+[2022-05-11 06:43:56][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:43:56][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:44:13][[32minfo[39m] API router started at /api
+[2022-05-11 06:44:15][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:44:15][[31merror[39m] Can not connect to Redis
+[2022-05-11 06:45:28][[32minfo[39m] GRAPHQL - - 200 1.369 ms
+
+[2022-05-11 06:45:44][[32minfo[39m] GRAPHQL query{getAllDistricts{id name}} - 200 314.928 ms
+
+[2022-05-11 06:46:13][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){token}} - 200 451.170 ms
+
+[2022-05-11 06:46:35][[32minfo[39m] GRAPHQL query GetAllDistricts{getAllDistricts{name}} - 200 179.106 ms
+
+[2022-05-11 06:47:26][[32minfo[39m] GRAPHQL query GetOneUser($getOneUserId:String!){getOneUser(id:$getOneUserId){name}} - 400 50.761 ms
+
+[2022-05-11 06:48:17][[32minfo[39m] GRAPHQL query GetOneUser($getOneUserId:String!){getOneUser(id:$getOneUserId){name}getAllUsers{users{id createdAt updatedAt username name}}} - 400 5.150 ms
+
+[2022-05-11 06:48:37][[32minfo[39m] GRAPHQL query GetOneUser($getOneUserId:String!){getOneUser(id:$getOneUserId){name}getAllUsers{users{id createdAt updatedAt username name}}} - 400 1.544 ms
+
+[2022-05-11 06:49:28][[32minfo[39m] GRAPHQL query GetOneUser($getOneUserId:String!){getOneUser(id:$getOneUserId){name}getAllUsers{users{id createdAt updatedAt username name}}} - 400 1.872 ms
+
+[2022-05-11 06:50:41][[32minfo[39m] GRAPHQL query GetOneUser($getOneUserId:String!){getOneUser(id:$getOneUserId){name}getAllUsers{users{id createdAt updatedAt username name}}} - 400 1.137 ms
+
+[2022-05-11 06:51:11][[32minfo[39m] GRAPHQL query GetAllUsers{getAllUsers{users{id createdAt updatedAt username name}}} - 200 29.600 ms
+
+[2022-05-11 06:51:24][[32minfo[39m] GRAPHQL query GetAllUsers{getAllUsers{users{id createdAt updatedAt username name}}} - 200 1.248 ms
+
+[2022-05-11 06:51:32][[32minfo[39m] GRAPHQL query GetAllUsers{getAllUsers{users{id createdAt updatedAt username name}}} - 200 1.419 ms
+
+[2022-05-11 06:56:31][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){token}} - 200 147.913 ms
+
+[2022-05-11 06:58:35][[32minfo[39m] API router started at /api
+[2022-05-11 06:58:42][[32minfo[39m] API router started at /api
+[2022-05-11 06:58:44][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 06:58:44][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:01:15][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 357.546 ms
+
+[2022-05-11 07:03:01][[32minfo[39m] API router started at /api
+[2022-05-11 07:03:04][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:03:04][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:04:26][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 589.044 ms
+
+[2022-05-11 07:05:10][[32minfo[39m] API router started at /api
+[2022-05-11 07:05:12][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:05:12][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:05:15][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 299.445 ms
+
+[2022-05-11 07:05:42][[32minfo[39m] API router started at /api
+[2022-05-11 07:05:44][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:05:44][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:05:47][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 331.666 ms
+
+[2022-05-11 07:06:02][[32minfo[39m] API router started at /api
+[2022-05-11 07:06:04][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:06:04][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:06:49][[32minfo[39m] API router started at /api
+[2022-05-11 07:06:51][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:06:51][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:07:04][[32minfo[39m] API router started at /api
+[2022-05-11 07:07:06][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:07:06][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:07:35][[32minfo[39m] API router started at /api
+[2022-05-11 07:07:36][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:07:36][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:07:44][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 321.370 ms
+
+[2022-05-11 07:08:21][[32minfo[39m] API router started at /api
+[2022-05-11 07:08:23][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:08:23][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:10:10][[32minfo[39m] API router started at /api
+[2022-05-11 07:10:12][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:10:12][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:10:52][[32minfo[39m] API router started at /api
+[2022-05-11 07:11:00][[32minfo[39m] API router started at /api
+[2022-05-11 07:11:04][[32minfo[39m] API router started at /api
+[2022-05-11 07:11:07][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:11:07][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:11:09][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 371.793 ms
+
+[2022-05-11 07:13:46][[32minfo[39m] API router started at /api
+[2022-05-11 07:13:52][[32minfo[39m] API router started at /api
+[2022-05-11 07:13:55][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:13:55][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:14:07][[32minfo[39m] API router started at /api
+[2022-05-11 07:14:10][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:14:10][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:14:14][[32minfo[39m] GRAPHQL mutation LoginByFireBase($accessToken:String!){loginByFireBase(accessToken:$accessToken){user{createdAt id}token}} - 200 415.076 ms
+
+[2022-05-11 07:19:52][[32minfo[39m] API router started at /api
+[2022-05-11 07:19:54][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:19:54][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:20:22][[32minfo[39m] GRAPHQL query Users{getAllUsers{users{id updatedAt username}}} - 200 50.922 ms
+
+[2022-05-11 07:21:16][[32minfo[39m] API router started at /api
+[2022-05-11 07:21:18][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:21:18][[31merror[39m] Can not connect to Redis
+[2022-05-11 07:21:28][[32minfo[39m] API router started at /api
+[2022-05-11 07:21:30][[31merror[39m] connect ECONNREFUSED 127.0.0.1:6379
+{ "errno": -61, "code": "ECONNREFUSED", "syscall": "connect", "address": "127.0.0.1", "port": 6379 }
+Error: connect ECONNREFUSED 127.0.0.1:6379
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1159:16)
+[2022-05-11 07:21:30][[31merror[39m] Can not connect to Redis

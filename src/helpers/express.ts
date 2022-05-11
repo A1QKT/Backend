@@ -1,5 +1,4 @@
 import express from 'express';
-import { loadRouter } from './autoloader';
 import { json } from 'body-parser';
 import cors from 'cors';
 import morgan from "morgan";
@@ -16,11 +15,8 @@ export function startServer(){
     app.get("/get", (req, res) => {
         res.send("ok em");
     });
-    app.post("/post", (req, res) => {
-        res.json(req.body);
-    });
-    app.listen(3000, () => {
-        console.log("start express on http://localhost:3000");    
+    app.listen(5555, () => {
+        console.log("start express on http://localhost:5555");    
     });
 }
 export default app;

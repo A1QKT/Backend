@@ -3,36 +3,14 @@
 * GraphQl API
 * Hygen generating template
 * Jest testing
-* Heroku deploying
+* Login by Firebase
+* Authorize by access token
 ## How to use this repository
-
-
-# GENERATE DATA TOOL
-
-install hygen
-
-`npm i -g hygen`
-
-## GENERATE COMPONENT
-
-`hygen generate component <name>`
-
-## GENERATE GRAPHQL
-
-`hygen generate graphql <module> -f <function-name>`
-
-## GENERATE API
-
-`hygen generate api <name>`
-
-## GENERATE JOB
-
-`hygen generate job <name>`
-
-## GENERATE PROVIDER
-
-`hygen generate provider <path> -n <name>`
-
-## GENREATE REPOSITORY
-
-`hygen generate provider <path> -n <name>`
+To login by firebase you should create .env file in root folder
+In .env file:
+FIREBASE_SERVICE_ACCOUNT=<your firebase-service-account>
+Some query in graphql is authorized by access token. First you should login by Firebase, then call the API loginByFireBase to get the jwt token, put it in the x-token in header to have authorization.
+## Autoloader
+Rest API and graphQL are auto loaded by autoloader when you put it in subfolder of modules folder with the extension
+* .graphql.ts, .schema.ts, .resolvers.ts for graphQL
+* .router.ts for RestFull API

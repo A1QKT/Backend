@@ -16,11 +16,12 @@ export default {
     resolvers: {
         Mutation: {
             loginByFireBase: async (root: any, args: any, context: any) => { 
-                const {accessToken}  = args;
+                const {accessToken} = args;
                 const decodedToken = await firebase.auth().verifyIdToken(accessToken);
+                console.log(decodedToken);
                 let user = await UserModel.findOne({uid: decodedToken.uid});
                 if(!user) {
-                    const provider = decodedToken.firebase.sign_in_provider
+                    // const provider = decodedToken.firebase.sign_in_provider
                     switch (decodedToken.firebase.sign_in_provider){
                     case "email":
                         user = await UserModel.create({
@@ -34,7 +35,7 @@ export default {
                         });
                         break;
                     case "google.com":
-                        user  = await UserModel.create({
+                        user = await UserModel.create({
                             uid: decodedToken.uid, 
                             username: decodedToken.email,
                             name: decodedToken.name,
@@ -47,11 +48,11 @@ export default {
                     default:
                         user = await UserModel.create({
                             uid: decodedToken.uid,
-                            username: decodedToken.phone_number,
-                            name: decodedToken.phone_number,
-                            phone: decodedToken.phone_number,
+                            username: decodedToken.email,
+                            name: decodedToken.email,
+                            phone: "",
                             password: null,
-                            email: "",
+                            email: decodedToken.email,
                             role: userRole.USER
                         });
                         break;
@@ -60,7 +61,7 @@ export default {
                 const token = new Token(user._id, user.role as any);
                 return {
                     user: user,
-                    token: token.sign
+                    token: token.sign //token for authorigation
                 }
             }
         }
