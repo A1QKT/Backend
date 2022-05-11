@@ -1,6 +1,6 @@
 ## What is in this repository
 * Rest API
-* GraphQl API
+* GraphQL API
 * Hygen generating template
 * Jest testing
 * Login by Firebase
